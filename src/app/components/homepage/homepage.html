@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gamery บริการขายเกม</title>
+    <style>
+      .carousel-img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+      .banner {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .buy-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        padding: 10px 20px;
+        background-color: #3366ff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      section {
+        margin: 20px;
+      }
+
+      .game-row {
+        display: flex;
+        gap: 15px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+      }
+
+      .game-card {
+        width: 260px; /* กำหนดความกว้างการ์ด */
+        height: 200px; /* กำหนดความสูงการ์ด */
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 10px;
+      }
+
+      .game-card img {
+        width: 100%; /* ทำให้ภาพเต็มการ์ด */
+        height: 150px; /* กำหนดความสูงของรูป */
+        object-fit: cover; /* ตัดภาพให้พอดี */
+        border-radius: 8px;
+      }
+
+      .discount {
+        /* position: absolute; */
+        background-color: #3366ff;
+        color: white;
+        padding: 2px 5px;
+        font-size: 12px;
+        border-radius: 3px;
+        top: 5px;
+        left: 5px;
+      }
+      .detal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      h2 {
+        color: #6e8cfb;
+        margin-bottom: 5%;
+      }
+      h3 {
+        color: #7b7b7b;
+      }
+      ngb-carousel img {
+        height: 400px; 
+        object-fit: cover; 
+      }
+    </style>
+  </head>
+  <body>
+    <ngb-carousel [interval]="2000" [pauseOnHover]="true" [wrap]="true" style="margin-top: 55px">
+      <ng-template ngbSlide>
+        <img src="https://hwimg.nl/fullw/fortnite.webp" class="d-block w-100" alt="First slide" />
+      </ng-template>
+      <ng-template ngbSlide>
+        <img
+          src="https://cdn2.unrealengine.com/fortnite-og-header-1900x600-3f465b890b09.jpg"
+          class="d-block w-100"
+          alt="Second slide"
+        />
+      </ng-template>
+      <ng-template ngbSlide>
+        <img
+          src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/zs/ZSY4U7J4BYFO1758309373106.jpg"
+          class="d-block w-100"
+          alt="Third slide"
+        />
+      </ng-template>
+    </ngb-carousel>
+
+    <section class="top-games">
+      <h2>| อันดับเกมขายดี</h2>
+      <div class="game-row">
+        <div class="game-card">
+          <img
+            src="https://img.online-station.net/_content/2019/0310/gallery/1552234168.jpg"
+            alt="Fragen"
+          />
+          <div class="detal">
+            <p>Fragen</p>
+          </div>
+        </div>
+        <div class="game-card">
+          <img
+            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
+            alt="Samurai's Shadow"
+          />
+          <div class="detal">
+            <p>Samurai's Shadow</p>
+            <span class="discount">10%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="top-games">
+      <h2>| ประเภทเกม</h2>
+      <h3>Action RPG</h3>
+      <div class="game-row">
+        <div class="game-card">
+          <img
+            src="https://img.online-station.net/_content/2019/0310/gallery/1552234168.jpg"
+            alt="Fragen"
+          />
+          <div class="detal">
+            <p>Fragen</p>
+          </div>
+        </div>
+        <div class="game-card">
+          <img
+            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
+            alt="Samurai's Shadow"
+          />
+          <div class="detal">
+            <p>Samurai's Shadow</p>
+            <span class="discount">10%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="top-games">
+      <h3>Racing</h3>
+      <div class="game-row">
+        <div class="game-card">
+          <img
+            src="https://img.online-station.net/_content/2019/0310/gallery/1552234168.jpg"
+            alt="Fragen"
+          />
+          <div class="detal">
+            <p>Fragen</p>
+          </div>
+        </div>
+        <div class="game-card">
+          <img
+            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
+            alt="Samurai's Shadow"
+          />
+          <div class="detal">
+            <p>Samurai's Shadow</p>
+            <span class="discount">10%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="top-games">
+      <h3>Sport Game</h3>
+      <div class="game-row">
+        <div class="game-card">
+          <img
+            src="https://img.online-station.net/_content/2019/0310/gallery/1552234168.jpg"
+            alt="Fragen"
+          />
+          <div class="detal">
+            <p>Fragen</p>
+          </div>
+        </div>
+        <div class="game-card">
+          <img
+            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
+            alt="Samurai's Shadow"
+          />
+          <div class="detal">
+            <p>Samurai's Shadow</p>
+            <span class="discount">10%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="top-games">
+      <h3>Puzzle</h3>
+      <div class="game-row">
+        <div class="game-card">
+          <img
+            src="https://img.online-station.net/_content/2019/0310/gallery/1552234168.jpg"
+            alt="Fragen"
+          />
+          <div class="detal">
+            <p>Fragen</p>
+          </div>
+        </div>
+        <div class="game-card">
+          <img
+            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
+            alt="Samurai's Shadow"
+          />
+          <div class="detal">
+            <p>Samurai's Shadow</p>
+            <span class="discount">10%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="top-games">
+      <h3>Party Game</h3>
+      <div class="game-row">
+        <div class="game-card">
+          <img
+            src="https://img.online-station.net/_content/2019/0310/gallery/1552234168.jpg"
+            alt="Fragen"
+          />
+          <div class="detal">
+            <p>Fragen</p>
+          </div>
+        </div>
+        <div class="game-card">
+          <img
+            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
+            alt="Samurai's Shadow"
+          />
+          <div class="detal">
+            <p>Samurai's Shadow</p>
+            <span class="discount">10%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gamery บริการขายเกม</title>
+    <style>
+      .cart-container {
+        width: 1200px;
+        height: auto;
+         margin: 55px auto; /*autoคือทำให้การ์ดอยุ่ตรงกลาง */
+        
+        padding: 16px;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .cart-item {
+        display: flex;
+        margin-bottom: 16px;
+        margin-left: 10%;
+      }
+
+      .item-image {
+        width: 393px;
+        height: 225px;
+        object-fit: cover;
+        margin-right: 16px;
+      }
+
+      .item-details {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+      }
+
+      .item-name {
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+
+      .quantity-control {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .item-price {
+        margin-top: 4px;
+        color: #555;
+      }
+
+      .discount {
+        font-weight: bold;
+        color: #6e8cfb;
+      }
+
+      .discount-section,
+      .total-section {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 16px;
+      }
+      .discountp {
+        /* position: absolute; */
+        background-color: #6e8cfb;
+        color: white;
+        padding: 2px 5px;
+        font-size: 12px;
+        border-radius: 3px;
+        top: 5px;
+        left: 5px;
+      }
+      h4{
+        font-weight: bold;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-top: 3%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cart-container">
+      <h4>สรุปคำสั่งซื้อ</h4>
+
+      <div class="cart-item">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv21kPLU7H0AjRl6NoguCwgft_Dkt4nQUZwA&s"
+          alt=""
+          class="item-image"
+        />
+        <div class="item-details">
+          <div class="item-name">Gangster Crimes Online 6: Mafia City</div>
+
+          <div class="quantity-control">
+            <button mat-icon-button>
+              <mat-icon>remove</mat-icon>
+            </button>
+            <span>1</span>
+            <button mat-icon-button>
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+
+          <div class="item-price">
+            <span class="discount">1,499</span>
+          </div>
+          <div>
+            <span class="discountp">10%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="discount-section">
+        <mat-form-field appearance="outline">
+          <mat-label>กรอกโค้ดส่วนลด</mat-label>
+          <input matInput />
+        </mat-form-field>
+        <button
+          mat-raised-button
+          color="primary"
+          style="margin-left: 10px; color: #fff; background-color: #6e8cfb"
+        >
+          ตกลง
+        </button>
+      </div>
+
+      <div class="total-section">
+        <div class="total">รวม:1,399</div>
+        <button
+          mat-raised-button
+          color="primary"
+          style="margin-left: 10px; color: #fff; background-color: #6e8cfb"
+        >
+          ซื้อ
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
