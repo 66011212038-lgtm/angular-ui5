@@ -4,11 +4,11 @@ import { MatInputModule } from "@angular/material/input";
 import {MatButtonModule} from '@angular/material/button';
 
 @Component({
-  selector: 'app-detall',
+  selector: 'app-coupon',
   imports: [MatIconModule, MatInputModule,MatButtonModule],
-  templateUrl: './detall.html',
-  styleUrl: './detall.scss'
+  templateUrl: './coupon.html',
+  styleUrl: './coupon.scss'
 })
-export class Detall {
+export class Coupon {
 
 }

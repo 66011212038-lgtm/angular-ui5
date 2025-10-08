@@ -7,7 +7,6 @@
       body {
         font-family: Arial, sans-serif;
         margin: 0;
-        background-color: #f5f6fa;
       } /* Section Profile */
       .profile-section {
         text-align: center;
@@ -84,6 +83,67 @@
         justify-content: center; 
         width: 100%;
       }
+       .history-container {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+
+      .history-card {
+        background-color: #fff;
+        border-radius: 10px;
+        border: 4px solid white;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        margin-top: 20%;
+      }
+
+      .user-name {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 25px;
+        color: #888383;
+      }
+
+      .transaction {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+
+      .transaction:last-child {
+        margin-bottom: 0;
+      }
+
+      .transaction-left {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .transaction-type {
+        font-weight: 600;
+        color: #888383;
+      }
+
+      .transaction-date {
+        font-size: 13px;
+        color: #aaa;
+      }
+
+      .transaction-amount {
+        font-weight: bold;
+        font-size: 16px;
+        color: #888383;
+      }
+
+      .plus {
+        color: #888383;
+      }
+
+      .minus {
+        color: #888383; 
+      }
     </style>
   </head>
   <body>
@@ -111,6 +171,28 @@
           </button>
         </div>
       </div>
+      <div class="history-container">
+
+      <div class="history-card">
+        <div class="user-name">ประวัติการทำรายการ</div>
+
+        <div class="transaction">
+          <div class="transaction-left">
+            <span class="transaction-type">เติมเงิน</span>
+            <span class="transaction-date">12 Sep 2025</span>
+          </div>
+          <div class="transaction-amount plus">+200.00</div>
+        </div>
+
+        <div class="transaction">
+          <div class="transaction-left">
+            <span class="transaction-type">ซื้อเกม</span>
+            <span class="transaction-date">12 Sep 2025</span>
+          </div>
+          <div class="transaction-amount minus">-600.00</div>
+        </div>
+      </div>
+    </div>
     </div>
   </body>
 </html>

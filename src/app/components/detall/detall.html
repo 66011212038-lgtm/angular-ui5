@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evil has survived</title>
+    <style>
+      body {
+        
+        font-family: 'Prompt', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: row;
+        background: #fff;
+        border-radius: 16px;
+        width: 80%;
+        max-width: 1200px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 20px;
+        align-items: center;
+         align-items: flex-start;
+      }
+
+      .card img {
+        width: 480px;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card-content h4 {
+        color: #f9b500;
+        margin: 0;
+      }
+
+      .card-content h2 {
+        margin: 8px 0;
+        font-size: 28px;
+        font-weight: 700;
+      }
+
+      .card-content p {
+        margin: 4px 0;
+        color: #333;
+        line-height: 1.5;
+      }
+
+      .price-row {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 40%;
+      }
+
+      .price {
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .discount {
+        background-color: #6e8cfb;
+        color: white;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-size: 14px;
+      }
+
+      .buy-button {
+        background-color: #6e8cfb;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 30px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-left: 20px;
+      }
+
+      .buy-button:hover {
+        background-color: #5876e0;
+      }
+
+      .cart-icon {
+        font-size: 28px;
+        color: gray;
+        margin-left: 12px;
+        cursor: pointer;
+      }
+      /* .price-row {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        margin-top: 50%;
+        gap: 40px; 
+      } */
+
+      .price {
+        display: flex;
+        align-items: center;
+        gap: 10px; 
+        font-size: 26px;
+        font-weight: bold;
+      }
+
+      .discount {
+        background-color: #6e8cfb;
+        color: white;
+        border-radius: 4px;
+        padding: 4px 8px;
+        font-size: 14px;
+      }
+
+      .bay {
+        display: flex;
+        align-items: center;
+        gap: 10px; 
+      }
+
+      .buy-button {
+        background-color: #6e8cfb;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .buy-button:hover {
+        background-color: #5876e0;
+      }
+
+      .cart-icon {
+        font-size: 28px;
+        color: gray;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <img
+          src="https://img.online-station.net/_content/2019/0310/gallery/1552234168.jpg"
+          alt="Evil has survived"
+        />
+        <div class="card-content">
+          <div>
+            <h4>Top 5</h4>
+            <h2>Evil has survived</h2>
+            <p style="color: gray; font-size: 14px">
+              Action RPG&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;20/12/68
+            </p>
+            <p>
+              Diablo II: Resurrected breathes new life into Blizzard Entertainment’s acclaimed ARPG
+              and its expansion, Diablo II: Lord of Destruction®, from beginning to end. Return to
+              fight for Sanctuary and discover the fate of the mysterious Dark Wanderer with all-new
+              3D graphics, brand-new cinematics, remastered audio, and the same classic Diablo II
+              gameplay you remember.
+            </p>
+          </div>
+
+          <div class="price-row">
+            <div class="price">
+              <span>1,599 บาท</span>
+              <span class="discount">-10%</span>
+            </div>
+
+            <div class="bay">
+              <button class="buy-button">ซื้อ</button>
+              <mat-icon class="cart-icon">shopping_cart</mat-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="header">
+    <button class="back-btn">← กลับ</button>
+  </div>
+
+  <div class="amount-grid">
+    <div class="amount-card">🪙฿100</div>
+    <div class="amount-card">🪙฿200</div>
+    <div class="amount-card">🪙฿500</div>
+    <div class="amount-card">🪙฿700</div>
+    <div class="amount-card">🪙฿1,000</div>
+    <div class="amount-card" (click)="openCustomAmount()">กำหนดเอง</div>
+  </div>
+
+  <button
+    mat-raised-button
+    color="primary"
+    style="margin-left: 10px; color: #fff; background-color: #6e8cfb"
+  >
+    <mat-icon>check_circle</mat-icon>
+    ยืนยัน
+  </button>
+
+  <div class="modal-overlay" *ngIf="showCustomAmount">
+    <div class="modal">
+      <h3>กรุณากำหนดจำนวนเงินที่ต้องการเติม</h3>
+      <input type="number" placeholder="เช่น 500" class="input-box" />
+      <div class="modal-buttons">
+        <button class="btn confirm"><mat-icon>check_circle</mat-icon> ยืนยัน</button>
+        <button class="btn cancel" (click)="closeCustomAmount()">
+          <mat-icon>cancel</mat-icon> ยกเลิก
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

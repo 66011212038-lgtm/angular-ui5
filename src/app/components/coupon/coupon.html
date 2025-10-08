@@ -1,0 +1,76 @@
+<head>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin: 55px auto;
+    }
+
+    .cart-item {
+      width: 700px;
+      height: auto;
+      margin: 55px auto;
+      padding: 16px;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .right-section {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 60%;
+    }
+
+    .example-button-row {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    h2 {
+      color: #7b7b7b;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>สร้างโค้ดส่วนลด</h2>
+    <div>
+      <div class="cart-item">
+        <div class="right-section">
+          <p style="margin-bottom: 0;">ชื่อโค้ดส่วนลด</p>
+          <mat-form-field appearance="outline" style="width: 400px">
+            <mat-label>ชื่อโค้ดส่วนลด</mat-label>
+            <input matInput value=/>
+          </mat-form-field>
+          <p style="margin-bottom: 0;">ส่วนลด</p>
+          <mat-form-field appearance="outline" style="width: 400px">
+            <mat-label>ส่วนลด</mat-label>
+            <input matInput value=/>
+          </mat-form-field>
+          <p style="margin-bottom: 0;">จำนวนโค้ดส่วนลด</p>
+          <mat-form-field appearance="outline" style="width: 400px">
+            <mat-label>จำนวนโค้ดส่วนลด</mat-label>
+            <input matInput value=/>
+          </mat-form-field>
+
+          <div class="example-button-row">
+            <button mat-raised-button style="background-color: #6e8cfb; color: aliceblue">
+              สร้าง
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

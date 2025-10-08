@@ -1,0 +1,113 @@
+<head>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 4%;
+    }
+
+    .cart-item {
+      width: 1200px;
+      height: auto;
+      margin: 55px auto;
+      padding: 16px;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+    }
+
+    .left-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      width: 40%;
+    }
+
+    .right-section {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 60%;
+    }
+
+    .example-button-row {
+      margin-top: 20px;
+    }
+
+    .preview {
+      margin-top: 15px;
+      max-width: 100%;
+      max-height: 250px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid #ccc;
+    }
+    .photo {
+      width: 450px;
+      height: 300px;
+      background-color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <div class="cart-item">
+        <div class="left-section">
+          <div class="photo">
+            <!-- ไอคอนกดเพื่อเลือกไฟล์ -->
+            <mat-icon (click)="fileInput.click()" style="margin-left: 47%; margin-top: 30%">
+              add_a_photo
+            </mat-icon>
+
+            <!-- ช่องเลือกไฟล์ -->
+            <input #fileInput type="file" accept="image/*" hidden />
+          </div>
+        </div>
+
+        <div class="right-section">
+          <mat-form-field appearance="outline" style="width: 550px">
+            <mat-label>ชื่อเกม</mat-label>
+            <input matInput value="Evil has survived" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 550px">
+            <mat-label>ประเภท</mat-label>
+            <input matInput value="Action RPG" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 550px">
+            <mat-label>รายละเอียด....</mat-label>
+            <textarea matInput style="height: 100px">
+Diablo II: Resurrected breathes new life into Blizzard Entertainment’s acclaimed ARPG and its expansion, Diablo II: Lord of Destruction®, from beginning to end. Return to fight for Sanctuary and discover the fate of the mysterious Dark Wanderer with all-new 3D graphics, brand-new cinematics, remastered audio, and the same classic Diablo II gameplay you remember.
+            </textarea>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" style="width: 550px">
+            <mat-label>ราคา</mat-label>
+            <input matInput value="1,499 บาท" />
+          </mat-form-field>
+
+          <div class="example-button-row">
+            <button
+              mat-stroked-button
+              style="color: #6e8cfb; border-color: #6e8cfb; margin-right: 20px"
+            >
+              <mat-icon>cancel</mat-icon> ยกเลิก
+            </button>
+            <button mat-raised-button style="background-color: #6e8cfb; color: aliceblue">
+              <mat-icon>save</mat-icon> บันทึก
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
