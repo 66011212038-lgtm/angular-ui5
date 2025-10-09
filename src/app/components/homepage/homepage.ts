@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 
+
 @Component({
   selector: 'app-homepage',
   imports: [RouterModule,NgbCarouselModule],
@@ -10,5 +11,6 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './homepage.scss'
 })
 export class Homepage {
- 
+
+
 }

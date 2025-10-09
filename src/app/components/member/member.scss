@@ -4,19 +4,26 @@ body {
   background-color: #f5f6fa;
 }
 
-table {
+.mat-mdc-table {
+  background-color: #fafafa;
   margin-top: 55px;
-  width: 70%;
+  width: 900px;
 }
 
-th.no {
-  width: 20%;
+.mat-mdc-header-cell {
+  font-weight: bold;
+  background-color: #2196f3;
+  color: black;
 }
 
-th.name {
-  width: 40%;
+
+.mat-mdc-cell {
+  padding: 12px;
 }
 
-th.email {
-  width: 40%;
+.table-container {
+  display: grid;
+  justify-content: center;
+  margin: 20px auto;
+
 }
