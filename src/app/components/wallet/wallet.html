@@ -3,14 +3,28 @@
     <button class="back-btn">← กลับ</button>
   </div>
 
-  <div class="amount-grid">
+  <!-- <div class="amount-grid">
     <div class="amount-card">🪙฿100</div>
     <div class="amount-card">🪙฿200</div>
     <div class="amount-card">🪙฿500</div>
     <div class="amount-card">🪙฿700</div>
     <div class="amount-card">🪙฿1,000</div>
     <div class="amount-card" (click)="openCustomAmount()">กำหนดเอง</div>
-  </div>
+  </div> -->
+
+  <form (ngSubmit)="submitTransaction()" #transactionForm="ngForm">
+  <label>จำนวนเงิน:</label>
+  <input type="number" [(ngModel)]="amount" name="amount" required placeholder="กรอกจำนวนเงิน">
+
+  <label>ประเภท:</label>
+  <select [(ngModel)]="transactionType" name="transactionType" required>
+    <option [value]="1">เติมเงิน</option>
+    <option [value]="2">ถอนเงิน</option>
+  </select>
+
+  <button type="submit" [disabled]="!transactionForm.form.valid">ส่ง</button>
+</form>
+
 
   <button
     mat-raised-button

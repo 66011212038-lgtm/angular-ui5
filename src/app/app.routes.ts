@@ -15,7 +15,7 @@ import { Homepage } from './components/homepage/homepage';
 export const routes: Routes = [
      //{path: '', component: ProfileUser},
      //{path: 'profile_admin', component: ProfileAdmin},
-       {path: '', component: Homepage},
+       //{path: '', component: Homepage},
         //{path: '', component: EditProfile},
     //    {path: '', component: Library},
     // {path: '', component: Detall},
@@ -23,6 +23,6 @@ export const routes: Routes = [
     // {path: '', component: EditGame},
     // {path: '', component: Trolley},
      //{path: '', component: Wallet},
-     //{path: '', component: Member},
+     {path: '', component: Member},
     //{path: '', component: Coupon},
 ];

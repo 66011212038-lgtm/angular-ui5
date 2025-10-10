@@ -102,6 +102,17 @@
 
 
     <section class="top-games">
+      <div class="search-bar">
+      <input type="text" placeholder="ค้นหา..."[(ngModel)]="searchgame">
+    </div>
+      <button
+          mat-raised-button
+          color="primary"
+          style="margin-left: 10px; color: #fff; background-color: #6e8cfb"
+          (click)="search()"
+        >
+          ตกลง
+        </button>
       <h2>| อันดับเกมขายดี</h2>
       <div class="game-row">
         <div class="game-card">
