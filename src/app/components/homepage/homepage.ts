@@ -34,4 +34,16 @@ export class Homepage {
     console.log('game', res);
     this.game = res;
   }
+
+
+  gamegame: GameGetRes[] = [];
+
+async ngOnInit() {
+  
+  const res = await this.GameService.gamepage();
+  this.gamegame = res;
+  console.log(this.gamegame);
+   // เช็คว่าข้อมูลมาถึงหรือไม่
+}
+
 }

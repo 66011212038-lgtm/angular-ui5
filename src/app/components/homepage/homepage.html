@@ -85,125 +85,53 @@
         color: #7b7b7b;
       }
       ngb-carousel img {
-        height: 400px; 
-        object-fit: cover; 
+        height: 400px;
+        object-fit: cover;
       }
-      
     </style>
   </head>
   <body>
     <div class="css-carousel">
-  <div class="slides">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaeASshPNm6-8qWeehGLnKobLE6VWiCRNRLQ&s" alt="Slide 1">
-    <img src="https://cdn2.unrealengine.com/fortnite-og-header-1900x600-3f465b890b09.jpg" alt="Slide 2">
-    <img src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/zs/ZSY4U7J4BYFO1758309373106.jpg" alt="Slide 3">
-  </div>
-</div>
-
+      <div class="slides">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaeASshPNm6-8qWeehGLnKobLE6VWiCRNRLQ&s"
+          alt="Slide 1"
+        />
+        <img
+          src="https://cdn2.unrealengine.com/fortnite-og-header-1900x600-3f465b890b09.jpg"
+          alt="Slide 2"
+        />
+        <img
+          src="https://bnetcmsus-a.akamaihd.net/cms/blog_header/zs/ZSY4U7J4BYFO1758309373106.jpg"
+          alt="Slide 3"
+        />
+      </div>
+    </div>
 
     <section class="top-games">
       <div class="search-bar">
-      <input type="text" placeholder="ค้นหา..."[(ngModel)]="searchgame">
-    </div>
+        <input type="text" placeholder="ค้นหา..." [(ngModel)]="searchgame" />
+      </div>
       <button
-          mat-raised-button
-          color="primary"
-          style="margin-left: 10px; color: #fff; background-color: #6e8cfb"
-          (click)="search()"
-        >
-          ตกลง
-        </button>
+        mat-raised-button
+        color="primary"
+        style="margin-left: 10px; color: #fff; background-color: #6e8cfb"
+        (click)="search()"
+      >
+        ตกลง
+      </button>
       <h2>| อันดับเกมขายดี</h2>
       <div class="game-row">
-        <div class="game-card">
+        <div class="game-card" *ngFor="let g of gamegame">
           <img
-            src="https://img.online-station.net/_content/2019/0310/gallery/1552234168.jpg"
-            alt="Fragen"
+            src="{{ g.image }}"
+            [alt]="g.name"
           />
           <div class="detal">
-            <p>Fragen</p>
+            <p>{{ g.name }}</p>
           </div>
         </div>
-        <div class="game-card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
-            alt="Samurai's Shadow"
-          />
-          <div class="detal">
-            <p>Samurai's Shadow</p>
-            <span class="discount">10%</span>
-          </div>
-        </div>
-         <div class="game-card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
-            alt="Samurai's Shadow"
-          />
-          <div class="detal">
-            <p>Samurai's Shadow</p>
-            <span class="discount">10%</span>
-          </div>
-        </div>
-         <div class="game-card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
-            alt="Samurai's Shadow"
-          />
-          <div class="detal">
-            <p>Samurai's Shadow</p>
-            <span class="discount">10%</span>
-          </div>
-        </div>
-         <div class="game-card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
-            alt="Samurai's Shadow"
-          />
-          <div class="detal">
-            <p>Samurai's Shadow</p>
-            <span class="discount">10%</span>
-          </div>
-        </div>
-         <div class="game-card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
-            alt="Samurai's Shadow"
-          />
-          <div class="detal">
-            <p>Samurai's Shadow</p>
-            <span class="discount">10%</span>
-          </div>
-        </div>
-         <div class="game-card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
-            alt="Samurai's Shadow"
-          />
-          <div class="detal">
-            <p>Samurai's Shadow</p>
-            <span class="discount">10%</span>
-          </div>
-        </div>
-         <div class="game-card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
-            alt="Samurai's Shadow"
-          />
-          <div class="detal">
-            <p>Samurai's Shadow</p>
-            <span class="discount">10%</span>
-          </div>
-        </div>
-         <div class="game-card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
-            alt="Samurai's Shadow"
-          />
-          <div class="detal">
-            <p>Samurai's Shadow</p>
-            <span class="discount">10%</span>
-          </div>
-        </div>
+        
       </div>
     </section>
 
@@ -220,16 +148,7 @@
             <p>Fragen</p>
           </div>
         </div>
-        <div class="game-card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
-            alt="Samurai's Shadow"
-          />
-          <div class="detal">
-            <p>Samurai's Shadow</p>
-            <span class="discount">10%</span>
-          </div>
-        </div>
+       
       </div>
     </section>
 
@@ -245,16 +164,7 @@
             <p>Fragen</p>
           </div>
         </div>
-        <div class="game-card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
-            alt="Samurai's Shadow"
-          />
-          <div class="detal">
-            <p>Samurai's Shadow</p>
-            <span class="discount">10%</span>
-          </div>
-        </div>
+       
       </div>
     </section>
 
@@ -270,16 +180,7 @@
             <p>Fragen</p>
           </div>
         </div>
-        <div class="game-card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
-            alt="Samurai's Shadow"
-          />
-          <div class="detal">
-            <p>Samurai's Shadow</p>
-            <span class="discount">10%</span>
-          </div>
-        </div>
+       
       </div>
     </section>
 
@@ -295,31 +196,12 @@
             <p>Fragen</p>
           </div>
         </div>
-        <div class="game-card">
-          <img
-            src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
-            alt="Samurai's Shadow"
-          />
-          <div class="detal">
-            <p>Samurai's Shadow</p>
-            <span class="discount">10%</span>
-          </div>
-        </div>
       </div>
     </section>
 
     <section class="top-games">
       <h3>Party Game</h3>
       <div class="game-row">
-        <div class="game-card">
-          <img
-            src="https://img.online-station.net/_content/2019/0310/gallery/1552234168.jpg"
-            alt="Fragen"
-          />
-          <div class="detal">
-            <p>Fragen</p>
-          </div>
-        </div>
         <div class="game-card">
           <img
             src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3043530/capsule_616x353.jpg?t=1751389223"
